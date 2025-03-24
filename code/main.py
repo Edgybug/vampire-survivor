@@ -22,12 +22,14 @@ class Game(pygame.sprite.Sprite):
        
         #sounds
         self.impact_sound =  pygame.mixer.Sound(join('audio', 'impact.ogg'))
+        self.impact_sound.set_volume(0.3)
         self.shoot_sound =  pygame.mixer.Sound(join('audio', 'shoot.wav'))
+        self.shoot_sound.set_volume(0.3)
         self.music_sound =  pygame.mixer.Sound(join('audio', 'music.wav'))
         self.music_sound.set_volume(0.2)
         self.music_sound.play(-1)
-        
-        #groups
+
+        #group
         self.all_sprites = AllSprites()
         self.collision_sprites = pygame.sprite.Group()
         self.bullet_sprites = pygame.sprite.Group()

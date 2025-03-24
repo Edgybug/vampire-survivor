@@ -127,7 +127,7 @@ class Enemy(pygame.sprite.Sprite):
         self.death_time = pygame.time.get_ticks()
         #change image
         surf = pygame.mask.from_surface(self.frames[0]).to_surface()
-        surf.get_colorkey('black')
+        surf.set_colorkey('black')
         self.image = surf
 
     def death_timer(self):
